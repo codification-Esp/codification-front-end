@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<style>
+    .btn {
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .success {background-color: #4CAF50;box-shadow: 0 5px #666;
+  transform: translateY(4px);} /* Green */
+    .success:hover {background-color: #46a049;box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+    
+    .info {background-color: #2196F3;box-shadow: 0 5px #666;
+  transform: translateY(4px);} /* Blue */
+    .info:hover {background: #0b7dda;box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+    
+    .warning {background-color: #ff9800;box-shadow: 0 5px #666;
+  transform: translateY(4px);} /* Orange */
+    .warning:hover {background: #e68a00;box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+    
+    .danger {background-color: #f44336;box-shadow: 0 5px #666;
+  transform: translateY(4px);} /* Red */ 
+    .danger:hover {background: #da190b;box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+    
+    .default {background-color: #4EB41F; color: #F0E5E5;box-shadow: 0 5px} /* Gray */ 
+    .default:hover {background: green;box-shadow: 0 5px #666666;
+  transform: translateY(4px);
+  }
+    </style> 
+    <a routerLink="/reservation"><button class="btn default">ACCUEIL</button></a>
+    <a routerLink="/about"><button class="btn warning">CONNEXION</button></a>
+    <a routerLink="/home"><button class="btn danger">CREATION DE COMPTE</button></a>
+    <button class="btn info">INFORMATION</button>
+    
+
+
+<router-outlet></router-outlet>
+
+
