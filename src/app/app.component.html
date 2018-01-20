@@ -3,43 +3,114 @@
     .btn {
         border: none;
         color: white;
-        padding: 14px 28px;
-        font-size: 16px;
+        padding: 8px 8px;
+        font-size: 10px;
         cursor: pointer;
     }
     
-    .success {background-color: #4CAF50;box-shadow: 0 5px #666;
+    .success {background-color: #327AAA;box-shadow: 0 5px #666;
   transform: translateY(4px);} /* Green */
-    .success:hover {background-color: #46a049;box-shadow: 0 5px #666;
+    .success:hover {background-color: #2A7A99;box-shadow: 0 5px #666;
   transform: translateY(4px);}
     
-    .info {background-color: #2196F3;box-shadow: 0 5px #666;
-  transform: translateY(4px);} /* Blue */
+    .info {background-color: #197D9B;box-shadow: 0 5px #666;
+  transform: translateY(4px);} 
     .info:hover {background: #0b7dda;box-shadow: 0 5px #666;
   transform: translateY(4px);}
+  .deco {background-color: #C42B16;box-shadow: 0 5px #666;
+  transform: translateY(4px);} 
+    .deco:hover {background: #0b7dda;box-shadow: 0 5px #666;
+  transform: translateY(4px);}
     
-    .warning {background-color: #ff9800;box-shadow: 0 5px #666;
+    .warning {background-color: #2290C4;box-shadow: 0 5px #666;
   transform: translateY(4px);} /* Orange */
-    .warning:hover {background: #e68a00;box-shadow: 0 5px #666;
+    .warning:hover {background: #4FA3DB;box-shadow: 0 5px #666;
   transform: translateY(4px);}
     
-    .danger {background-color: #f44336;box-shadow: 0 5px #666;
+    .danger {background-color: #56B3DF;box-shadow: 0 5px #666666;
   transform: translateY(4px);} /* Red */ 
-    .danger:hover {background: #da190b;box-shadow: 0 5px #666;
+    .danger:hover {background: #368FC2;box-shadow: 0 5px #666;
   transform: translateY(4px);}
     
-    .default {background-color: #4EB41F; color: #F0E5E5;box-shadow: 0 5px} /* Gray */ 
-    .default:hover {background: green;box-shadow: 0 5px #666666;
+    .default {background-color: #4A99E2;box-shadow: 0 5px #948989;/* Gray */ 
+  transform:translateY(4px);}
+    .default:hover {background: #2D91CA;box-shadow: 0 5px rgba(212, 209, 209, 0.54);
   transform: translateY(4px);
   }
-    </style> 
+    </style>
     <a routerLink="/reservation"><button class="btn default">ACCUEIL</button></a>
     <a routerLink="/about"><button class="btn warning">CONNEXION</button></a>
     <a routerLink="/home"><button class="btn danger">CREATION DE COMPTE</button></a>
-    <button class="btn info">INFORMATION</button>
-    
+    <a routerLink="/information"><button class="btn info">INFORMATION</button></a>
+    <a routerLink="/deconnexion"><button class="btn deco" >DECONNEXION</button></a>
 
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal data
+      </mat-panel-title>
+      <mat-panel-description>
+        Type your name and age
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
+    <mat-form-field>
+      <input matInput placeholder="First name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" min="1" placeholder="Age">
+    </mat-form-field>
+
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Destination
+      </mat-panel-title>
+      <mat-panel-description>
+        Type the country name
+        <mat-icon>map</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="Country">
+    </mat-form-field>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Day of the trip
+      </mat-panel-title>
+      <mat-panel-description>
+        Inform the date you wish to travel
+        <mat-icon>date_range</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="Date" [matDatepicker]="picker" (focus)="picker.open()" readonly>
+    </mat-form-field>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">End</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+</mat-accordion>
 <router-outlet></router-outlet>
-
-
