@@ -1,39 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="assets/css/reset.css" type="text/css" media="all">
-	<link rel="stylesheet" href="assets/css/grid.css" type="text/css" media="all">
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
-  <link rel="Stylesheet" href="css/reservation.component.css">
-	<!--[if lt IE 9]-->
-		<script type="text/javascript" src="assets/js/html5.js"></script>
-	<!--[endif]-->
-</head>
 
-<body>
-
-    <img src="assets/images/images1.jpg" class="rounded float-right" alt="...">
-    <img src="assets/images/images2.jpg" class="rounded float-right" alt="...">
-    <img src="assets/images/images.jpg" class="rounded float-right" alt="...">
+<div style="position:absolute">
+<img src="assets/images/images1.jpg" class="rounded float-right" alt="...">
+<img src="assets/images/images.jpg" class="rounded float-right" alt="...">
+</div>
 	<header>
-
-		<section class="adv-content">
-			<div class="container">
-				<ul class="breadcrumbs">
-					<li>Merci pour votre visite sur notre site web!</li>
-				</ul>
-				<form action="" id="search-form">
-					<fieldset>
-						<input type="text" value=""><input type="submit" value="">
-					</fieldset>
-				</form>
-			</div>
+		<section class="adv-content" style="background-color: rgb(223, 17, 17)">
 		</section>
-	</header>
-	<section id="content">
-		<div class="top">
+  </header>
+  
+
+	<section id="content" style="background-color: rgb(64, 29, 221)">
+		<div class="top" style="background-color: rgb(28, 26, 189)">
 			<div class="container">
 				<div class="clearfix">
 					<div class="grid3 first">
@@ -42,12 +19,12 @@
                <li>-choix des batiments</li>
                <li>-choix  des etages </li>
                <li>-choix des chambres</li>
-               <li>-choix des des des positions de lits</li>
+               <li>-choix des  positions de lits</li>
                <li>-lavabo ,douche, et WC</li>
                 </ul>
 					</div>
-					<div class="grid9">
-						<h2>Faites votre reservation ici</h2>		
+					<div class="grid3 first" style="color:blue; width: 100%" >
+            <marquee> <h2>FAITES VOTRE RESERVATION</h2></marquee>	
           </div>
 						
 					</div>
@@ -57,9 +34,9 @@
 
 
 
-    <div class="container">
+    <div class="container" >
       <div class="card"></div>
-      <div class="card">
+      <div class="card" style="background-color: rgb(49, 15, 202)">
         <h1 class="title">Faites vos choix</h1>
         <form>
             <div class="input-container">
@@ -98,27 +75,22 @@
       </div>                                                                                                                
 
     </div>
-
-
-
-
-
-
-    <div class="grid3 first">
+    <div>
+      <div class="grid3 first" style="background-color: black; width:25% ">
         <h3>Contact</h3>
-        <div class="wrapper">
-          <dl class="address">
+        <div class="wrapper" style="background-color: rgb(42, 116, 165)">
+          <dl class="address" >
             <dd><span>Telephone:</span>33 000 00 00</dd>
             <dd><span>FAX:</span>33 100 00 00</dd>
             <dd><span>E-mail:</span><a href="#">MonService@gmail</a></dd>
           </dl>
         </div>
       </div>
-    <div class="grid6">
+    <div class="grid11" style="background-color: black">
         <h3>Contact via notre E-mail</h3>
         <form action="" id="contacts-form">
           <fieldset>
-            <div class="grid3 first">
+            <div class="grid6 first">
               <label>NOM:<br />
                 <input type="text" value="nom" />
               </label>
@@ -129,22 +101,27 @@
                 <input type="text" value="faxe" />
               </label>
             </div>
-            <div class="grid3">Message:<br />
+            <div class="grid3" style="background-color: black">Message:<br />
               <textarea></textarea>
-              <div class="alignright">
-                <a href="#" class="alt" onClick="document.getElementById('contacts-form').reset()">Clear</a> &nbsp; &nbsp; &nbsp;<a href="#" class="alt" onClick="document.getElementById('contacts-form').submit()">Submit</a>
+              <div class="alignright" style="background-color: brown">
+                <a href="#" class="alt"  onClick="document.getElementById('contacts-form').reset()">Clear</a> &nbsp; &nbsp; &nbsp;<a href="#" class="alt" onClick="document.getElementById('contacts-form').submit()">Submit</a>
               </div>
             </div>
           </fieldset>
         </form>
       </div>
-	</section>
+    </div>
+    
+  </section>
+
+
 	<footer>
-		<div class="container">
-			<div class="wrapper">
-				<div class="copy">SAMA Codification (c) 2018	</div>
+		<div class="container" style="position:initial">
+			<div class="wrapper" style=" background-color: black">
+				<div class="copy" style="color:black ; width: 1000%">SAMA Codification (c) 2018	</div>
 			</div>
-		</div>
-	</footer>
-</body>
-</html>
+    </div>
+    
+    
+  </footer>
+

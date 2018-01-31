@@ -1,0 +1,36 @@
+
+  
+<!-- Mixins-->
+<!-- Pen Title-->
+<div class="box"style="background-color: darkgreen">
+<div class="pen-title">
+  <h1> <span>Connectez-vous  sur SAMA CODIFICATION</span></h1>
+</div>
+<div class="rerun"><a href="">ou creer votre compte ici</a></div>
+<div class="container" >
+  <div class="card"></div>
+  <div class="card" style="background-color: rgb(21, 14, 121)">
+    <h1 class="title">CONNEXION</h1>
+    <form>
+      <div class="input-container">
+        <input type="text" id="username" name="username" [(ngModel)]="user.username" required="required"/>
+        <label for="username">nom d'utilisteur</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required="required"/>
+        <label for="password">votre mot de passe</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container" style="background-color: rgb(156, 13, 13)">
+        <button (click)="login()"><span>Go</span></button>
+      </div>
+      <div class="footer"><a href="#">Forgot your password?</a></div>
+    </form> 
+  </div>
+</div>
+</div>
+
+
+
+

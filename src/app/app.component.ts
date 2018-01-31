@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,18 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  step = 0;
-  
-    setStep(index: number) {
-      this.step = index;
-    }
-  
-    nextStep() {
-      this.step++;
-    }
-  
-    prevStep() {
-      this.step--;
-    }
- 
-}
+    constructor(private rediriger:Router){
+    } 
+  }
