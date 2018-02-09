@@ -6,7 +6,6 @@ import{FormsModule} from '@angular/forms';
 import { MatButtonModule, MatProgressBarModule, MatExpansionModule, MatIconModule } from '@angular/material';
 
 import { HttpClientModule } from '@angular/common/http';
-import {LoopBackAuth} from './shared/sdk/services/core';
 
 
 import { AppComponent } from './app.component';

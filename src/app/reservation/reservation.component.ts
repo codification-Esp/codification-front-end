@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-reservation',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent implements OnInit {
+  user={
+    batiment:"Batiment A",
+    etage:" deuxieme etage",
+    couloir:"couloirGouche",
+    numeroCambre:"2",
+    position:"Position Gauche"
 
-  constructor() { }
+  }
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+  }
+  reservation(){
+    this.dataService.post("Accounts/resevation",this.user)
+    .subscribe(
+      success=>{
+        console.log(success);
+      },
+      err=>{
+        console.log(err);
+      }
+    );
   }
 
 }

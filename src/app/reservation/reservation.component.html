@@ -41,14 +41,14 @@
         <form>
             <div class="input-container">
                 <p>CHOIX DES BATIMENTS</p>
-                <select id="country" name="country"><br/>
+                <select id="batiment" name="batiment" [(ngModel)]="user.batiment" ><br/>
                   <option value="batimentA">Batiment A</option>
                   <option value="batimentB">Batiment B</option>
                   <option value="batimentC">Batiment C</option>
                   <option value="batimentF">Batiment F</option>
                 </select><br/>
                 <p>CHOIX DES ETAGES</p>
-                <select>
+                <select id="etage" name="etage" [(ngModel)]="user.etage" >
                     <option value="etage1">premier etage</option>
                     <option value="etage2">deuxieme etage</option>
                     <option value="etage3">troisieme etage</option>
@@ -56,20 +56,21 @@
                     <option value="etage0">raid de saucet</option>
                 </select>
                 <P>CHOIX DES COULOIRS</P>
-                <select id="country" name="couloir"><br/>
+                <select id="couloir" name="couloir"[(ngModel)]="user.couloir" ><br/>
                   <option value="couloirGauche">couloirGauche</option>
                   <option value="couloirDroite">CouloirDroite</option>
                   
                 </select><br/>
                 <P>CHOISIR UN NUMERO DE CHAMBRE</P>
-                <input type="number" id="lname" name="numero" placeholder="numero de chambre" ><br/>
+                <input type="number" id="lname" name="numeroChambre" [(ngModel)]="user.numeroChambre" placeholder="numero de chambre" ><br/>
                 <p>CHOIX DES POSITIONS DE VOTRE CHAMBRE</p>
-                <select id="country" name="etage"><br/>
+                <select id="position" name="position" [(ngModel)]="user.position" ><br/>
                   <option value="positionGauche">Position Gauche</option>
                   <option value="positionDroite">Position Droite</option>
                 </select><br/>
               
-                <input type="submit" value="VALIDER" style="background: red">
+                <button (click)="reservation()">VALIDER</button>
+                
               </div>       
         </form>
       </div>                                                                                                                

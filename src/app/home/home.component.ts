@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'dans notre plate-forme SAMA CODIFICATION';
-  constructor() { }
+
+  user={
+    nom:"",
+    prenom:"",
+    dateNaiss:"",
+    lieuNaiss:"",
+    email:"",
+    departement:"",
+    option:"",
+    niveau:"",
+    username:"",
+    password:""
+    
+  }
+  constructor(private dataService:DataService) { }
 
   ngOnInit() {
+  }
+  compte()
+  {
+    this.dataService.post("Etudiant/Etudiants",this.user)
+    .subscribe(
+      success=>{
+        console.log(success);
+      },
+      err=>{
+        console.log(err);
+      }
+    );
   }
 
 }
